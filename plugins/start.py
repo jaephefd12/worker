@@ -102,7 +102,7 @@ async def start_command(client: Client, message: Message):
                 id = message.from_user.id
             ),
             reply_markup = reply_markup,
-            photo="https://miro.medium.com/v2/resize:fit:700/1*rh9WHM1FvhNHPqQavAirlQ.jpeg"
+            photo="https://i.ibb.co/pLLtXQK/Add-a-little-bit-of-body-text.jpg"
         )
 
         
