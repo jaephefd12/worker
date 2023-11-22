@@ -102,8 +102,6 @@ async def start_command(client: Client, message: Message):
                 id = message.from_user.id
             ),
             reply_markup = reply_markup,
-            disable_web_page_preview = True,
-            quote = True ,
             photo="https://miro.medium.com/v2/resize:fit:700/1*rh9WHM1FvhNHPqQavAirlQ.jpeg"
         )
 
