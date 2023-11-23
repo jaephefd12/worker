@@ -10,7 +10,7 @@ from logging.handlers import RotatingFileHandler
 
 
 #Bot token @Botfather
-TG_BOT_TOKEN = "6317689894:AAHfv5TkPbVPSNdkXvRw_Lvzyk-FGrFNmuk"
+TG_BOT_TOKEN = "6678596451:AAEZTD0EudibvvZ3-M7gPkf51fht18It8mI"
 
 #Your API ID from my.telegram.org
 APP_ID =  22456717
@@ -62,6 +62,10 @@ USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(1250450587)
+ADMINS.append(1142110839)
+ADMINS.append(1390511928)
+
+
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
