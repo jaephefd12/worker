@@ -32,7 +32,7 @@ DB_URI = 'mongodb+srv://ssaggtgtt:dedeewdew4e@trgtgtgtrgr.be6swzn.mongodb.net/?r
 DB_NAME = "ssaggtgtt"
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+FORCE_SUB_CHANNEL = -1001518433530
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -63,8 +63,9 @@ USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
 ADMINS.append(OWNER_ID)
 ADMINS.append(1250450587)
 ADMINS.append(1142110839)
-ADMINS.append(1390511928)
 
+ADMINS.append(1390511928)
+ADMINS.append(5315069289)
 
 
 LOG_FILE_NAME = "filesharingbot.txt"
