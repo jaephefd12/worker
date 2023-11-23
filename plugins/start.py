@@ -21,6 +21,7 @@ from database.database import add_user, del_user, full_userbase, present_user
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
     id = message.from_user.id
+      await message.set_chat_protected_content(id, enabled)
     if not await present_user(id):
         try:
             await add_user(id)
@@ -121,6 +122,7 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
     
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
+    await message.set_chat_protected_content(message.from_user.id, enabled)
     buttons = [
         [
             InlineKeyboardButton(
@@ -155,12 +157,14 @@ async def not_joined(client: Client, message: Message):
 
 @Bot.on_message(filters.command('users') & filters.private & filters.user(ADMINS))
 async def get_users(client: Bot, message: Message):
+    await message.set_chat_protected_content(message.from_user.id, enabled)
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
     users = await full_userbase()
     await msg.edit(f"{len(users)} users are using this bot")
 
 @Bot.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
 async def send_text(client: Bot, message: Message):
+    await message.set_chat_protected_content(message.from_user.id, enabled)
     if message.reply_to_message:
         query = await full_userbase()
         broadcast_msg = message.reply_to_message
